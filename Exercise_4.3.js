@@ -6,13 +6,17 @@ let arrRandom = [];
 
 let rand10 = () => {
   let result = Math.floor(Math.random() * Math.floor(10));
-  console.log(result);
+  return result;
 }
 
 let multiRand = (numRandom) => {
-  for (var i = 0; i < numRandom; i++) {
-    let random = rand10();
-    arrRandom.push(random);
+
+  while (numRandom > 0) {
+    arrRandom.push(rand10());
+
+    numRandom -= 1;
   }
+
+  console.log(arrRandom);
 }
-console.log(arrRandom);
+multiRand(numRandom);

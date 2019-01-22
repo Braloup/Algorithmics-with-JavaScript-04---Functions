@@ -1,5 +1,5 @@
 let toatalNumber = 0;
-let averageNumber;
+let averageNumber = 0;
 
 let average = (arr) => {
   for (let i = 0; i < myArr.length; i++) {
@@ -9,6 +9,12 @@ let average = (arr) => {
   }
   console.log("The average of your array is : " + toatalNumber / averageNumber);
 }
-let myArr = [4, 4, 5, 5];
+
+let min = (arr) => {
+  console.log("The minimum element of your aray is: " + Math.min(...arr));
+}
+
+let myArr = [2, 4, 5, 8];
 
 average(myArr);
+min(myArr);

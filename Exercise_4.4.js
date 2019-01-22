@@ -14,7 +14,12 @@ let min = (arr) => {
   console.log("The minimum element of your aray is: " + Math.min(...arr));
 }
 
+let max = (arr) => {
+  console.log("The minimum element of your aray is: " + Math.max(...arr));
+}
+
 let myArr = [2, 4, 5, 8];
 
 average(myArr);
 min(myArr);
+max(myArr);

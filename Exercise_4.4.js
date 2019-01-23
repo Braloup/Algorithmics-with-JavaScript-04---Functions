@@ -1,10 +1,13 @@
+const readLineSync = require("readline-sync");
+
 let toatalNumber = 0;
 let averageNumber = 0;
+let randomArr = [];
 
 let average = (arr) => {
-  for (let i = 0; i < myArr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
 
-    toatalNumber += myArr[i];
+    toatalNumber += arr[i];
     averageNumber = arr.length;
   }
   console.log("The average of your array is : " + toatalNumber / averageNumber);
@@ -18,8 +21,18 @@ let max = (arr) => {
   console.log("The minimum element of your aray is: " + Math.max(...arr));
 }
 
-let myArr = [2, 4, 5, 8];
+let multiRand = () => {
 
-average(myArr);
-min(myArr);
-max(myArr);
+  let arrNumber = readLineSync.question("Enter the number of digits you want to average: ");
+
+  while (arrNumber > 0) {
+    randomArr.push(Math.floor(Math.random() * 100));
+    arrNumber -= 1;
+  }
+  console.log("That is your random array between 1 & 100: " + randomArr);
+  average(randomArr);
+  min(randomArr);
+  max(randomArr);
+}
+
+multiRand();

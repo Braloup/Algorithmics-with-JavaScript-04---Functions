@@ -2,21 +2,25 @@ const readLineSync = require("readline-sync");
 
 let numRandom = readLineSync.question("Please, enter the number of random number you want: ");
 
-let arrRandom = [];
 
-let rand10 = () => {
-  let result = Math.floor(Math.random() * Math.floor(10));
-  return result;
-}
 
 let multiRand = (numRandom) => {
 
-  while (numRandom > 0) {
-    arrRandom.push(rand10());
+  let arrRandom = [];
 
-    numRandom -= 1;
+  let rand10 = () => {
+
+    let result = Math.floor(Math.random() * Math.floor(10));
+
   }
 
+  for (var i = 0; i < numRandom; i++) {
+
+    let random = rand10();
+
+    arrRandom.push(random);
+    console.log(arrRandom);
+  }
   return arrRandom;
 }
-console.log(multiRand(numRandom));
+console.log(multiRand());

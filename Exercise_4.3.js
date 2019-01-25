@@ -17,6 +17,6 @@ let multiRand = (numRandom) => {
     numRandom -= 1;
   }
 
-  console.log(arrRandom);
+  return arrRandom;
 }
-multiRand(numRandom);
+console.log(multiRand(numRandom));

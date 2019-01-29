@@ -1,24 +1,31 @@
-const readLineSync = require("readline-sync");
+/*
+**This program ask the user how many random number does he want.
+**And return an array whit the exact rando number.
+*/
 
-let numRandom = readLineSync.question("Please, enter the number of random number you want: ");
+const readLineSync = require("readline-sync");//Call the module for ask the user.
 
-let multiRand = (numRandom) => { //function retur an array with random number.
+
+// Function who generate random number.
+  let rand10 = () => {
+
+    let result = Math.floor(Math.random() * 10);
+    return result;
+  }
+
+//function return an array with random numbers.
+let multiRand = (numRandom) => {
+
+   numRandom = readLineSync.question("Please, enter the number of random number you want: ");// Ask the user how many random number does he want.
 
   let arrRandom = [];
 
-  let rand10 = () => { // Function who generate random number.
+  for (var i = 0; i < numRandom; i++) { // Push  all of random number the user ask in a array.
 
-    let result = Math.floor(Math.random() * Math.floor(10));
-
+    arrRandom.push( rand10());
   }
 
-  for (var i = 0; i < numRandom; i++) { // Push in a array all of random number the user ask.
-
-    let random = rand10();
-
-    arrRandom.push(random);
-    console.log(arrRandom);
-  }
   return arrRandom;
 }
+
 console.log(multiRand());

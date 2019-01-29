@@ -1,4 +1,8 @@
-const readLineSync = require("readline-sync");
+/*
+**Create a function who return 2 points in a 2D space
+*/
+
+const readLineSync = require("readline-sync"); //Call the module for ask the user.
 
 let x1 = 0;
 let y1 = 0;
@@ -6,6 +10,7 @@ let x2 = 0;
 let y2 = 0;
 let distance = 0;
 
+//Function who ask coordonate of two point and return distance between it.
 let calcDistance = () => {
   x1 = readLineSync.question("Enter x1 coordinate for the first point: ");
   y1 = readLineSync.question("Enter y1 coordinate for the first point: ");
@@ -14,7 +19,7 @@ let calcDistance = () => {
 
   distance = Math.sqrt((Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2))); //Calculate distance between two  point in 2D space.
 
-  console.log("The distance between the first and the second point is: " + distance.toFixed(3)); // return distance around 2 gigit.
+  return "The distance between the first and the second point is: " + distance.toFixed(3); // return distance around 2 gigit.
 }
 
-calcDistance();
+console.log(calcDistance());
